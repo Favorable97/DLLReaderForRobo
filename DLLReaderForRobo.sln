@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLLReaderForRobo", "DLLReaderForRobo\DLLReaderForRobo.csproj", "{1AF949FC-846B-4E0D-AE72-2E6B7BD232E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AF949FC-846B-4E0D-AE72-2E6B7BD232E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF949FC-846B-4E0D-AE72-2E6B7BD232E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF949FC-846B-4E0D-AE72-2E6B7BD232E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF949FC-846B-4E0D-AE72-2E6B7BD232E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB667A4F-390A-4E9D-8C0A-BB51CC2EFE5F}
+	EndGlobalSection
+EndGlobal

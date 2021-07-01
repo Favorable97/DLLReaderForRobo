@@ -1,0 +1,14 @@
+﻿<Window x:Class="DLLReaderForRobo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DLLReaderForRobo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="385.294">
+    <Grid Margin="0,0,2,0">
+        <Button x:Name="SelectFileBtn" Content="Выбрать .dll файл" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="157" Height="41" Click="SelectFileBtn_Click"/>
+        <Label x:Name="ResultLbl" Content="" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+
+    </Grid>
+</Window>
