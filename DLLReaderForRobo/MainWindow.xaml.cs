@@ -33,25 +33,27 @@ namespace DLLReaderForRobo {
             else
                 return "-1";
         }
-
         private void SelectFileBtn_Click(object sender, RoutedEventArgs e)
         {
             ResultLbl.Content = "";
-            string path = SelectFile();
-            if (path == "-1") {
+            string filePath = SelectFile();
+            if (filePath == "-1") {
                 MessageBox.Show("Файл не выбран");
             } else {
-                Assembly ass = Assembly.LoadFrom(path);
-                foreach (Type type in ass.GetTypes()) {
-                    //ResultTxt.AppendText(type.Name + "\n"); //Console.WriteLine(type.Name);
-                    ResultLbl.Content += type.Name + "\n";
-                    foreach (MethodInfo method in type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.NonPublic)) {
-                        if (method.IsFamily || method.IsPublic)
-                            //ResultTxt.AppendText("\t" + method.Name + "\n"); //Console.WriteLine("    " + method.Name);
-                            ResultLbl.Content += "\t" + method.Name + "\n";
-                    }
-                    ResultLbl.Content += "\n";
+                AnalysFileDll(filePath);
+            }
+        }
+
+        private void AnalysFileDll(string filePath)
+        {
+            Assembly ass = Assembly.LoadFrom(filePath);
+            foreach (Type type in ass.GetTypes()) {
+                ResultLbl.Content += type.Name + "\n";
+                foreach (MethodInfo method in type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.NonPublic)) {
+                    if (method.IsFamily || method.IsPublic)
+                        ResultLbl.Content += "\t" + method.Name + "\n";
                 }
+                ResultLbl.Content += "\n";
             }
         }
     }
